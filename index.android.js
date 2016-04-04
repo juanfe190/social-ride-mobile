@@ -30,9 +30,15 @@ class SocialRide extends Component {
     );
   }
 
+  /**
+   * encargado de renderizar cada scene en el momento que state.currentScene cambie
+   * @param  {Object}     route     ruta del scene // no usado para esta implementacion
+   * @param  {Component}  navigator componente del navegador
+   */
   renderScene(route, navigator){
-    
+
     console.log(route);
+
     switch (this.state.currentScene) {
       case 'login':
         return <Login navigator = {navigator} navigateTo = {this.navigateTo.bind(this)}/>;
@@ -44,6 +50,10 @@ class SocialRide extends Component {
     }
   }
 
+  /**
+   * helper method para navegar entre scenes, cambie el state del componente forzando el rendering
+   * @param  {String}   scene nombre del scene
+   */
   navigateTo(scene){
     this.setState({currentScene: scene});
   }
