@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^0.14.7",
     "react-native": "^0.22.2",
-    "react-native-maps": "^0.3.1"
+    "react-native-maps": "^0.3.1",
+    "react-native-thesidebar": "0.0.1"
   }
 }
